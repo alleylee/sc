@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="吕尉" />
+    <title>东陆校区综合管理服务中心</title>
+    <!-- zui -->
+    <link href="css/zui.css" rel="stylesheet">
+    <link href="css/zui.min.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!--[if lt IE 9]>
+      <script src="lib/ieonly/html5shiv.js"></script>
+      <script src="lib/ieonly/respond.js"></script>
+      <script src="lib/ieonly/excanvas.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  #parse("header.vm")  
+<div class="wrapper" id="content">
+      <div class="row">
+        
+         #parse("sidebar.vm")  
+        <div class="col-xs-4" id="cont-flash">
+            <div id="myNiceCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-wrap="true" data-pause="hover">
+              <!-- 圆点指示器 -->
+              <ol class="carousel-indicators">
+		<li data-target="#myNiceCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myNiceCarousel" data-slide-to="1"></li>
+                <li data-target="#myNiceCarousel" data-slide-to="2"></li>
+              </ol>
+
+              <!-- 轮播项目 -->
+  <div class="carousel-inner">
+#foreach($article in $cms.getContents("滚动图片",3)) 
+#if($article.name=="1")
+<div class="item active">
+#end
+#if($article.name!="1")
+<div class="item">
+#end
+           <img alt="$article.name" src="$cms.getPictureUrl($article)" width="310" height="254">
+           <div class="carousel-caption">
+           </div>
+        </div>
+#end
+  </div>
+
+              <!-- 项目切换按钮 -->
+              <a class="left carousel-control" href="#myNiceCarousel" data-slide="prev">
+                <span class="icon icon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#myNiceCarousel" data-slide="next">
+                <span class="icon icon-chevron-right"></span>
+              </a>
+            </div>
+        </div>
+        <div class="col-xs-5" id="focus-news">
+          <div class="panel">
+            <div class="panel-heading">
+              重要通知<span class="more"><a href="$cms.getUrl("重要通知")" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
+            </div>
+            <div class="panel-heading" id="focus-news-title">
+#foreach($article in $cms.getContents("重要通知",1)) 
+              <h3><a href="$cms.getUrl($article)" target="_blank">#summary($article.name 21)</a></h3>
+              <hr>
+              <p id="focus-news-p">#set ($fullArticle=$cmsService.getArticle($article.ID))
+      #summary($fullArticle.summary 56)</p>
+            </div>
+ #end
+            <div class="panel-body" id="focus-news-con">
+              <ul class="focus-news-list">
+                 #foreach($article in $cms.getContents("重要通知",4)) 
+      <li><a href="$cms.getUrl($article)">#summary($article.name 28)</a></li>
+ #end
+              </ul>
+            </div>
+          </div>
+        </div>
+       <div class="col-xs-9" id="cont">
+          <div class="panel" id="mod">
+           <div class="panel-heading">
+             信息公告<span class="more"><a href="$cms.getUrl("信息公告")" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
+           </div>
+           <div class="panel-body">
+             <ul class="index-news-list">
+               #foreach($article in $cms.getContents("信息公告",5)) 
+      <li><a href="$cms.getUrl($article)">#summary($article.name 24)</a></li>
+ #end
+             </ul>
+           </div>
+          </div>
+          <div class="panel" id="mod">
+            <div class="panel-heading">
+              服务指南<span class="more"><a href="$cms.getUrl("服务指南")" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
+            </div>
+            <div class="panel-body">
+              <ul class="index-news-list">
+                #foreach($article in $cms.getContents("服务指南",5)) 
+      <li><a href="$cms.getUrl($article)">#summary($article.name 24)</a></li>
+ #end
+              </ul>
+            </div>
+          </div>
+          <div class="panel" id="mod">
+            <div class="panel-heading">
+              相关制度<span class="more"><a href="$cms.getUrl("相关制度")" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
+            </div>
+            <div class="panel-body">
+              <ul class="index-news-list">
+                #foreach($article in $cms.getContents("相关制度",5)) 
+      <li><a href="$cms.getUrl($article)">#summary($article.name 24)</a></li>
+ #end
+              </ul>
+            </div>
+          </div>
+          <div class="panel" id="mod">
+            <div class="panel-heading">
+              常见问题<span class="more"><a href="$cms.getUrl("常见问题")" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
+            </div>
+            <div class="panel-body">
+              <ul class="index-news-list">
+                #foreach($article in $cms.getContents("常见问题",5)) 
+      <li><a href="$cms.getUrl($article)">#summary($article.name 24)</a></li>
+ #end
+              </ul>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  #parse("footer.vm")  
+</body></html>

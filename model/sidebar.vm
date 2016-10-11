@@ -1,0 +1,46 @@
+
+<div class="col-xs-3" id="sidebar">
+          <div class="panel" id="office">
+            <div class="panel-heading" id="centerinfo">
+              东陆校区师生综合服务大厅
+            </div>
+            <div class="panel-body" id="siderbar-centerinfo">
+              <a class="btn btn-lg rzbm" href="$cms.getUrl("入驻部门")"><i class="icon icon-1x icon-group"></i>入驻部门</a>
+              <a class="btn btn-lg yjx" href="http://cm.ynu.edu.cn/cms/modules/onlineLeaveMessageList.jsp?typeID=81&siteID=$curChannel.site.ID"><i class="icon icon-1x icon-envelope-alt"></i> 意见箱</a>
+            </div>
+          </div>
+          <div class="panel" id="office">
+            <div class="panel-heading" id="office-time">
+              办公时间
+            </div>
+            <div class="panel-body" id="siderbar-office">
+              <p><i class="icon icon-calendar"></i> 周一至周四<br>
+              上午8:00-12:00，下午14:00-17:30</p>
+            </div>
+            <div class="panel-heading" id="office-tel">
+              咨询电话
+            </div>
+            <div class="panel-body" id="siderbar-office">
+              <h1><i class="icon icon-phone icon-2x"></i>0871-65032414</h1>
+            </div>
+            <div class="panel-heading" id="office-addr">
+              中心地址
+            </div>
+            <div class="panel-body">
+              <p><i class="icon icon-home"></i>
+昆明市翠湖北路2号云南大学东陆校区文津楼B区二楼</p>
+            </div>
+          </div>
+          <div class="panel" id="download-index">
+           <div class="panel-heading">
+             常用下载<span class="more"><a href="$cms.getUrl("常用下载")" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
+           </div>
+           <div class="panel-body">
+             <ul class="sidebar-news-list">
+               #foreach($article in $cms.getContents("下载中心",5)) 
+      <li><a href="$cms.getUrl($article)">#summary($article.name 17)</a></li>
+ #end
+             </ul>
+           </div>
+          </div>
+        </div>

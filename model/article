@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="吕尉" />
+    <title>东陆校区综合管理服务中心 - $curArticle.name</title>
+    <!-- zui -->
+    <link href="css/zui.css" rel="stylesheet">
+    <link href="css/zui.min.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!--[if lt IE 9]>
+      <script src="lib/ieonly/html5shiv.js"></script>
+      <script src="lib/ieonly/respond.js"></script>
+      <script src="lib/ieonly/excanvas.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  #parse("header.vm")  
+<div class="wrapper" id="content">
+      <div class="row">
+        
+  #parse("sidebar.vm")  
+        <div class="col-xs-9" id="list-con">
+          <div class="panel">
+            <div class="panel-heading" id="head-breadcrumb">
+              <ol class="breadcrumb">
+                <i class="icon icon-home"></i>
+                #foreach($channel in $cms.getPathChannels($curChannel))
+        <li><a href="$cms.getUrl($channel)">$channel.title</a></li>
+        #end
+              </ol>
+            </div>
+            <div class="panel-body article-con">
+
+              <article class="article">
+                <header>
+                  <h1 class="text-center">$curArticle.name</h1>
+                  <dl class="dl-inline">
+                    <dt>来源：</dt>
+                    <dd>$!{curArticle.author}</dd>
+                    <dt>时间：</dt>
+                    <dd>$cms.format($curArticle.publishDate,"yyyy-MM-dd") </dd>
+                  </dl>
+                </header>
+                <section class="content">
+                  <p>$!{curArticle.content}</p>
+                </section>
+                <footer>
+#if ($cmsService.getArticleAttachmentCount($curArticle.ID, 3)>0)
+         <p class="text-important">相关附件</p>
+	<dl>
+	#foreach($doc in $cms.getAttachments($curArticle))
+	<dd>
+	<a title="$doc.srcFile" href="$cms.getUrl($doc)" target="_blank">$doc.srcFile</a>						  
+	</dd>
+	#end
+	</dl>
+      </p>
+#end
+                </footer>
+              </article>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  #parse("footer.vm")  
+</body></html>

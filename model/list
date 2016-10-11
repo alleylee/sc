@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="吕尉" />
+    <title>东陆校区综合管理服务中心 - $curChannel.title</title>
+    <!-- zui -->
+    <link href="css/zui.css" rel="stylesheet">
+    <link href="css/zui.min.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!--[if lt IE 9]>
+      <script src="lib/ieonly/html5shiv.js"></script>
+      <script src="lib/ieonly/respond.js"></script>
+      <script src="lib/ieonly/excanvas.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  #parse("header.vm")  
+<div class="wrapper" id="content">
+      <div class="row">
+          #parse("sidebar.vm")  
+
+        <div class="col-xs-9" id="list-con">
+          <div class="panel">
+            <div class="panel-heading" id="head-breadcrumb">
+              <ol class="breadcrumb">
+                <i class="icon icon-home"></i>
+                #foreach($channel in $cms.getPathChannels($curChannel))
+        <li><a href="$cms.getUrl($channel)">$channel.title</a></li>
+        #end
+              </ol>
+            </div>
+            <div class="panel-body">
+              <div class="list list-condensed">
+                <header>
+                  <h3><i class="icon-list-ul"></i>$curChannel.title</h3>
+                </header>
+                <div class="items items-hover">
+#foreach($article in $cms.getPageContents($curChannel,$curPage))
+                  <div class="item">
+                    <div class="item-heading">
+                      <div class="pull-right"><span class="text-muted">$cms.format($article.publishDate,"yyyy/MM/dd")</span></div>
+                      <h4><a title="$article.name" href="$cms.getUrl($article)" target="_blank">#summary($article.name 35)</a></h4>
+                    </div>
+                   </div>
+         #end
+                 </div>
+              </div>
+              <footer class="foot-navbar">
+                <ul class="pager">
+                   <li><a>共$totalRows条新闻，分$totalPage页</a></li>
+                  <li><a href="$cms.getIndexFileName($curChannel, 1)">最前页</a></li>
+                  <li class="previous"><a href="$cms.getIndexFileName($curChannel, $prePage)">上一页</a></li>
+                  <li class="active"><a href="$cms.getIndexFileName($curChannel, $curPage)">$curPage</a></li>
+                  <li class="next"><a href="$cms.getIndexFileName($curChannel, $nextPage)">下一页</a></li>
+                  <li><a href="$cms.getIndexFileName($curChannel, $totalPage)">最后页</a></li>
+                </ul>
+              </footer>
+            </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  #parse("footer.vm")  
+</body></html>

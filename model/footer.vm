@@ -1,0 +1,19 @@
+
+    <div class="wrapper" id="footer">
+      <div class="inner">
+        <div class="foot">
+          <p>Copyright  2015-
+            <script type="text/javascript">
+var date = new Date();
+	document.write(1900 + date.getYear());
+          </script>
+东陆校区综合管理服务中心 地址：昆明市翠湖北路2号文津楼B区二楼 邮编：650091   <a href="http://www.miitbeian.gov.cn/">滇ICP备05004791</a> </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ZUI Javascript组件 -->
+    <script src="js/zui.js"></script>
+    <script src="js/zui.min.js"></script>
+  </body>
+</html>

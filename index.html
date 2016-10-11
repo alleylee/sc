@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>东陆校区综合管理服务中心</title>
     <!-- zui -->
+    <link href="css/zui.css" rel="stylesheet">
     <link href="css/zui.min.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="lib/ieonly/html5shiv.js"></script>
+      <script src="lib/ieonly/respond.js"></script>
+      <script src="lib/ieonly/excanvas.js"></script>
+    <![endif]-->
   </head>
   <body>
     <div class="wrapper" id="header">
       <div class="inner">
-        <div class="head"></div>
+        <div class="head"><img src="css/img/head_bg.png" width="960" height="214"></div>
       </div>
     </div>
     <div class="wrapper" id="nav">
@@ -29,56 +35,173 @@
     <div class="wrapper" id="content">
       <div class="row">
         <div class="col-xs-3" id="sidebar">
-          <div class="panel">
-            <div class="panel-heading">
-              ...
+          <div class="panel" id="office">
+            <div class="panel-heading" id="centerinfo">
+              东陆校区综合管理服务中心
             </div>
-            <div class="panel-body">
-              ...
-            </div>
-          </div>
-          <div class="panel">
-            <div class="panel-heading">
-              ...
-            </div>
-            <div class="panel-body">
-              ...
+            <div class="panel-body" id="siderbar-centerinfo">
+              <a class="btn btn-lg rzbm" href="your/url/"><i class="icon icon-1x icon-group"></i>入驻部门</a>
+              <a class="btn btn-lg yjx" href="your/url/"><i class="icon icon-1x icon-envelope-alt"></i> 意见箱</a>
             </div>
           </div>
-          <div class="panel">
-            <div class="panel-heading">
-              ...
+          <div class="panel" id="office">
+            <div class="panel-heading" id="office-time">
+              办公时间
+            </div>
+            <div class="panel-body" id="siderbar-office">
+              <p><i class="icon icon-calendar"></i> 周一至周四<br>
+              上午8:00-12:00，下午14:00-17:30</p>
+            </div>
+            <div class="panel-heading" id="office-tel">
+              咨询电话
+            </div>
+            <div class="panel-body" id="siderbar-office">
+              <h1><i class="icon icon-phone icon-2x"></i>0871-65032362</h1>
+            </div>
+            <div class="panel-heading" id="office-addr">
+              中心地址
             </div>
             <div class="panel-body">
-              ...
+              <p><i class="icon icon-home"></i>
+昆明市翠湖北路2号云南大学东陆校区文津楼B区二楼</p>
+            </div>
+          </div>
+          <div class="panel" id="download-index">
+           <div class="panel-heading">
+             常用下载<span class="more"><a href="#" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
+           </div>
+           <div class="panel-body">
+             <ul class="sidebar-news-list">
+               <li><a href="#" target="_blank" title="2016级各学院、研究院新生报到点">2016级各学院、研究院新生报到点</a></li>
+               <li><a href="#" target="_blank" title="科技处关于做好科技基础资源调查专项">科技处关于做好科技基础资源调查专项</a></li>
+               <li><a href="#" target="_blank" title="关于毕业研究生档案转递相关事宜的通">关于毕业研究生档案转递相关事宜的通</a></li>
+               <li><a href="#" target="_blank" title="学校召开学生工作例会">学校召开学生工作例会</a></li>
+               <li><a href="#" target="_blank" title="关于毕业研究生档案转递相关事宜的通">关于毕业研究生档案转递相关事宜的通</a></li>
+             </ul>
+           </div>
+          </div>
+        </div>
+        <div class="col-xs-4" id="cont-flash">
+            <div id="myNiceCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-wrap="true" data-pause="hover">
+              <!-- 圆点指示器 -->
+              <ol class="carousel-indicators">
+                <li data-target="#myNiceCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myNiceCarousel" data-slide-to="1"></li>
+                <li data-target="#myNiceCarousel" data-slide-to="2"></li>
+              </ol>
+
+              <!-- 轮播项目 -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img alt="First slide" src="css/img/slide1.jpg" width="310" height="254">
+                  <div class="carousel-caption">
+                    <h3>我是第一张幻灯片</h3>
+                    <p>:)</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img alt="Second slide" src="css/img/slide2.jpg" width="310" height="254">
+                  <div class="carousel-caption">
+                    <h3>我是第二张幻灯片</h3>
+                    <p>0.0</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img alt="Third slide" src="css/img/slide3.jpg" width="310" height="254">
+                  <div class="carousel-caption">
+                    <h3>我是第三张幻灯片</h3>
+                    <p>最后一张咯~</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 项目切换按钮 -->
+              <a class="left carousel-control" href="#myNiceCarousel" data-slide="prev">
+                <span class="icon icon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#myNiceCarousel" data-slide="next">
+                <span class="icon icon-chevron-right"></span>
+              </a>
+            </div>
+        </div>
+        <div class="col-xs-5" id="focus-news">
+          <div class="panel">
+            <div class="panel-heading">
+              重要通知<span class="more"><a href="#" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
+            </div>
+            <div class="panel-heading" id="focus-news-title">
+              <h3><a href="#" target="_blank" title="关于东陆校区师生综合服务大厅启动运行的通知">关于东陆校区师生综合服务大厅启动运行的通知</a></h3>
+              <hr>
+              <p id="focus-news-p">为贯彻落实2016年第四次校长办公会议“关于尽快启动运行东陆校区综合服务大厅”的决议，更好地为东陆校区的师生服务...</p>
+            </div>
+            <div class="panel-body" id="focus-news-con">
+              <ul class="focus-news-list">
+                <li><a href="#" target="_blank" title="2016级各学院、研究院新生报到点">2016级各学院、研究院新生报到点</a></li>
+                <li><a href="#" target="_blank" title="科技处关于做好科技基础资源调查专项2016年度项目申报工作">科技处关于做好科技基础资源调查专项2016年度项目申报工作</a></li>
+                <li><a href="#" target="_blank" title="关于毕业研究生档案转递相关事宜的通知">关于毕业研究生档案转递相关事宜的通知</a></li>
+                <li><a href="#" target="_blank" title="学校召开学生工作例会">学校召开学生工作例会</a></li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="col-xs-9" id="cont">
-          <div class="panel">
+       <div class="col-xs-9" id="cont">
+          <div class="panel" id="mod">
+           <div class="panel-heading">
+             信息公告<span class="more"><a href="#" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
+           </div>
+           <div class="panel-body">
+             <ul class="index-news-list">
+               <li><a href="#" target="_blank" title="2016级各学院、研究院新生报到点">2016级各学院、研究院新生报到点</a></li>
+               <li><a href="#" target="_blank" title="科技处关于做好科技基础资源调查专项2016年度项目申报">科技处关于做好科技基础资源调查专项2016年度项目申报</a></li>
+               <li><a href="#" target="_blank" title="关于毕业研究生档案转递相关事宜的通知">关于毕业研究生档案转递相关事宜的通知</a></li>
+               <li><a href="#" target="_blank" title="学校召开学生工作例会">学校召开学生工作例会</a></li>
+               <li><a href="#" target="_blank" title="关于毕业研究生档案转递相关事宜的通知">关于毕业研究生档案转递相关事宜的通知</a></li>
+             </ul>
+           </div>
+          </div>
+          <div class="panel" id="mod">
             <div class="panel-heading">
-              ...
+              服务指南<span class="more"><a href="#" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
             </div>
             <div class="panel-body">
-              ...
+              <ul class="index-news-list">
+                <li><a href="#" target="_blank" title="2016级各学院、研究院新生报到点">2016级各学院、研究院新生报到点</a></li>
+                <li><a href="#" target="_blank" title="科技处关于做好科技基础资源调查专项2016年度项目申报">科技处关于做好科技基础资源调查专项2016年度项目申报</a></li>
+                <li><a href="#" target="_blank" title="关于毕业研究生档案转递相关事宜的通知">关于毕业研究生档案转递相关事宜的通知</a></li>
+                <li><a href="#" target="_blank" title="学校召开学生工作例会">学校召开学生工作例会</a></li>
+                <li><a href="#" target="_blank" title="关于毕业研究生档案转递相关事宜的通知">关于毕业研究生档案转递相关事宜的通知</a></li>
+              </ul>
             </div>
           </div>
-          <div class="panel">
+          <div class="panel" id="mod">
             <div class="panel-heading">
-              ...
+              相关制度<span class="more"><a href="#" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
             </div>
             <div class="panel-body">
-              ...
+              <ul class="index-news-list">
+                <li><a href="#" target="_blank" title="2016级各学院、研究院新生报到点">2016级各学院、研究院新生报到点</a></li>
+                <li><a href="#" target="_blank" title="科技处关于做好科技基础资源调查专项2016年度项目申报">科技处关于做好科技基础资源调查专项2016年度项目申报</a></li>
+                <li><a href="#" target="_blank" title="关于毕业研究生档案转递相关事宜的通知">关于毕业研究生档案转递相关事宜的通知</a></li>
+                <li><a href="#" target="_blank" title="学校召开学生工作例会">学校召开学生工作例会</a></li>
+                <li><a href="#" target="_blank" title="关于毕业研究生档案转递相关事宜的通知">关于毕业研究生档案转递相关事宜的通知</a></li>
+              </ul>
             </div>
           </div>
-          <div class="panel">
+          <div class="panel" id="mod">
             <div class="panel-heading">
-              ...
+              常见问题<span class="more"><a href="#" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
             </div>
             <div class="panel-body">
-              ...
+              <ul class="index-news-list">
+                <li><a href="#" target="_blank" title="2016级各学院、研究院新生报到点">2016级各学院、研究院新生报到点</a></li>
+                <li><a href="#" target="_blank" title="科技处关于做好科技基础资源调查专项2016年度项目申报">科技处关于做好科技基础资源调查专项2016年度项目申报</a></li>
+                <li><a href="#" target="_blank" title="关于毕业研究生档案转递相关事宜的通知">关于毕业研究生档案转递相关事宜的通知</a></li>
+                <li><a href="#" target="_blank" title="学校召开学生工作例会">学校召开学生工作例会</a></li>
+                <li><a href="#" target="_blank" title="关于毕业研究生档案转递相关事宜的通知">关于毕业研究生档案转递相关事宜的通知</a></li>
+              </ul>
             </div>
           </div>
+          <div class="clearfix"></div>
         </div>
       </div>
     </div>
@@ -98,6 +221,7 @@ var date = new Date();
     <!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
     <script src="js/jquery-1.11.0.min.js"></script>
     <!-- ZUI Javascript组件 -->
+    <script src="js/zui.js"></script>
     <script src="js/zui.min.js"></script>
   </body>
 </html>

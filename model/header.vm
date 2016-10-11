@@ -1,0 +1,18 @@
+
+<div class="wrapper" id="header">
+      <div class="inner">
+#foreach($article in $cms.getContents("首页顶部图片",1)) 
+        <div class="head" style="background:url($cms.getPictureUrl($article))"><img src="css/img/head_bg.png" width="960" height="214"></div>
+#end
+      </div>
+    </div>
+    <div class="wrapper" id="nav">
+      <nav class="navbar navbar-default" role="navigation">
+        <ul class="nav navbar-nav nav-justified">
+          <li><a href="$cms.getUrl($rootChannel)">首页</a>
+       #foreach($channel in $cms.getTopChildren($rootChannel))
+	    <li><a href="$cms.getUrl($channel)">$channel.title</a></li>
+       #end
+        </ul>
+      </nav>
+    </div>
