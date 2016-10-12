@@ -6,6 +6,7 @@
             </div>
             <div class="panel-body" id="siderbar-centerinfo">
               <a class="btn btn-lg rzbm" href="$cms.getUrl("入驻部门")"><i class="icon icon-1x icon-group"></i>入驻部门</a>
+              <a class="btn btn-lg yjx" href="$cms.getUrl("值班情况")"><i class="icon icon-1x icon-calendar"></i>值班情况</a>
               <a class="btn btn-lg yjx" href="http://cm.ynu.edu.cn/cms/modules/onlineLeaveMessageList.jsp?typeID=81&siteID=$curChannel.site.ID"><i class="icon icon-1x icon-envelope-alt"></i> 意见箱</a>
             </div>
           </div>

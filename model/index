@@ -118,11 +118,11 @@
           </div>
           <div class="panel" id="mod">
             <div class="panel-heading">
-              常见问题<span class="more"><a href="$cms.getUrl("常见问题")" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
+              业务咨询<span class="more"><a href="$cms.getUrl("业务咨询")" target="_blank" title="更多"> More <i class="icon icon-double-angle-right"></i></a></span>
             </div>
             <div class="panel-body">
               <ul class="index-news-list">
-                #foreach($article in $cms.getContents("常见问题",5)) 
+                #foreach($article in $cms.getContents("业务咨询",5)) 
       <li><a href="$cms.getUrl($article)">#summary($article.name 24)</a></li>
  #end
               </ul>
